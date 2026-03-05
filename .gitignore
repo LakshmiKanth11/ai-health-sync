@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# SQLite database (don't commit user data)
+*.db
+*.sqlite3
+
+# Environment / secrets
+.env
+.env.*
+*.secret
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NLTK data (large, downloaded at runtime)
+nltk_data/
+
+# Logs
+*.log
+pip-log.txt

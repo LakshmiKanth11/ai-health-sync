@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AI Health Sync – Smart Medical Chatbot</title>
+  <meta name="description"
+    content="AI-powered symptom diagnosis chatbot with ML & NLP. Book doctor appointments instantly." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+
+  <!-- ╔══════ NAV ══════╗ -->
+  <nav id="main-nav">
+    <a class="nav-brand" href="#" onclick="showScreen('landing')">
+      <div class="nav-logo">🏥</div>
+      <span class="nav-title">AI Health<span>Sync</span></span>
+    </a>
+    <div class="nav-links">
+      <button class="nav-btn" onclick="showScreen('landing')">🏠 Home</button>
+      <button class="nav-btn" onclick="showScreen('chat')">💬 Diagnose</button>
+      <button class="nav-btn" onclick="showScreen('booking')">📅 Book</button>
+      <button class="nav-btn primary" id="nav-start-btn" onclick="showScreen('chat')">Start Assessment</button>
+    </div>
+  </nav>
+
+  <!-- ╔══════ LANDING SCREEN ══════╗ -->
+  <section id="screen-landing" class="screen active">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><span></span> AI-Powered · ML + NLP</div>
+          <h1 class="hero-title">Your Smart<br /><span class="accent">Medical Assistant</span></h1>
+          <p class="hero-desc">
+            Describe your symptoms in plain language. Our Machine Learning model analyses
+            them with NLP to suggest possible conditions and connect you with the right specialist.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="showScreen('chat')">🩺 Start Diagnosis</button>
+            <button class="btn-secondary" onclick="showScreen('booking')">📅 Book Appointment</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">20+</div>
+              <div class="stat-lbl">Conditions</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">50+</div>
+              <div class="stat-lbl">Symptoms</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">13</div>
+              <div class="stat-lbl">Specialists</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">ML</div>
+              <div class="stat-lbl">Powered</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating demo card -->
+        <div class="hero-visual">
+          <div class="floating-card">
+            <div class="fc-header">
+              <div class="fc-icon">🤖</div>
+              <div>
+                <div class="fc-title">HealthBot AI</div>
+                <div class="fc-sub">NLP + ML Analysis</div>
+              </div>
+            </div>
+            <div class="fc-chat-bubble">I have a headache, fever and body ache…</div>
+            <div class="fc-chat-bubble bot">
+              🧠 <strong>ML Analysis:</strong> Influenza (Flu) — 87% confidence<br />
+              <span class="fc-tag">Fever</span>
+              <span class="fc-tag">Headache</span>
+              <span class="fc-tag">Muscle Pain</span>
+            </div>
+            <div class="fc-chat-bubble">Recommend a doctor?</div>
+            <div class="fc-chat-bubble bot">📅 Dr. Priya Sharma — Available today!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Powered by real Machine Learning and Natural Language Processing</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="fc-icon-lg">🗣️</div>
+          <h3>Natural Language Input</h3>
+          <p>NLTK tokenizes and lemmatizes your message. Symptom entities are extracted from free-form text — no forms
+            to fill.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon-lg">🤖</div>
+          <h3>ML Diagnosis Engine</h3>
+          <p>A RandomForestClassifier trained on 2,000+ synthetic patient samples maps your symptoms to conditions with
+            confidence scores.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon-lg">📊</div>
+          <h3>Confidence Scoring</h3>
+          <p>Each diagnosis shows a probability score so you understand how strongly the model supports each condition.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon-lg">📅</div>
+          <h3>Instant Appointment Booking</h3>
+          <p>Doctors are filtered by the recommended specialty. Pick a slot, fill a form, and get confirmed — stored in
+            SQLite.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon-lg">🚨</div>
+          <h3>Emergency Detection</h3>
+          <p>Symptoms with severity score ≥9 (e.g. chest pain + seizure) trigger immediate emergency guidance.</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-icon-lg">🔄</div>
+          <h3>Multi-turn Dialogue</h3>
+          <p>The conversation state machine asks follow-up questions, collects age and duration, then refines the ML
+            analysis.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack Strip -->
+    <div class="tech-strip">
+      <div class="tech-inner">
+        <span class="tech-label">Built with:</span>
+        <span class="tech-tag">🐍 Python</span>
+        <span class="tech-tag">🌶️ Flask</span>
+        <span class="tech-tag">🌲 scikit-learn</span>
+        <span class="tech-tag">📝 NLTK</span>
+        <span class="tech-tag">🗄️ SQLite</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════ CHAT SCREEN ══════╗ -->
+  <section id="screen-chat" class="screen">
+    <div class="chat-layout">
+
+      <!-- Sidebar -->
+      <aside class="chat-sidebar">
+        <div class="sidebar-section">
+          <p class="sidebar-label">🔬 Detected Symptoms</p>
+          <div id="sidebar-symptoms" class="symptom-tag-list">
+            <span style="color:var(--text-muted);font-size:0.8rem">None yet</span>
+          </div>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <p class="sidebar-label">⚡ Quick Prompts</p>
+          <button class="quick-action-btn" onclick="sendQuick('I have a headache and fever')">🤒 Fever &
+            Headache</button>
+          <button class="quick-action-btn" onclick="sendQuick('chest pain and shortness of breath')">❤️ Chest
+            Pain</button>
+          <button class="quick-action-btn" onclick="sendQuick('I feel sad and very tired all the time')">💙 Depression &
+            Fatigue</button>
+          <button class="quick-action-btn" onclick="sendQuick('stomach pain nausea and vomiting')">🫃 GI Issues</button>
+          <button class="quick-action-btn" onclick="sendQuick('joint pain and swelling in legs')">🦴 Joint Pain</button>
+          <button class="quick-action-btn" onclick="sendQuick('I have rash and itching')">🌿 Allergy &amp; Rash</button>
+        </div>
+        <div class="sidebar-divider"></div>
+        <div class="sidebar-section">
+          <p class="sidebar-label">⚙️ Actions</p>
+          <button class="quick-action-btn" onclick="resetChat()">🔄 New Assessment</button>
+          <button class="quick-action-btn" onclick="showAllAppointments()">📋 My Appointments</button>
+        </div>
+      </aside>
+
+      <!-- Chat Main -->
+      <div class="chat-main">
+        <div class="chat-header">
+          <div class="chat-bot-info">
+            <div class="bot-avatar">🤖</div>
+            <div>
+              <div class="bot-name">HealthBot AI</div>
+              <div class="bot-status"><span class="status-dot"></span> Online · ML Ready</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="nav-btn" onclick="resetChat()" title="New Assessment">🔄</button>
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+          <!-- Messages injected by JS -->
+        </div>
+
+        <div class="chat-input-area">
+          <div class="chat-input-wrap">
+            <textarea id="chat-input" class="chat-input" rows="1"
+              placeholder="Describe your symptoms… (e.g. 'I have a headache, fever and sore throat')"
+              onkeydown="handleInputKey(event)" oninput="autoResize(this)"></textarea>
+            <button class="send-btn" id="send-btn" onclick="sendMessage()" title="Send">➤</button>
+          </div>
+          <p style="font-size:0.72rem;color:var(--text-muted);margin-top:6px">
+            ⚕️ AI assessment only — not a substitute for professional medical advice.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════ BOOKING SCREEN ══════╗ -->
+  <section id="screen-booking" class="screen">
+    <div class="booking-container">
+      <div class="booking-header">
+        <h2>📅 Book an Appointment</h2>
+        <p>Select a specialist based on your diagnosis and book a slot instantly.</p>
+      </div>
+
+      <!-- Specialty filter chips -->
+      <div class="specialty-filter" id="specialty-filter">
+        <button class="filter-chip active" onclick="filterDoctors('all',this)">All Specialists</button>
+        <button class="filter-chip" onclick="filterDoctors('general',this)">🩺 General</button>
+        <button class="filter-chip" onclick="filterDoctors('cardiology',this)">❤️ Cardiology</button>
+        <button class="filter-chip" onclick="filterDoctors('neurology',this)">🧠 Neurology</button>
+        <button class="filter-chip" onclick="filterDoctors('pulmonology',this)">🫁 Pulmonology</button>
+        <button class="filter-chip" onclick="filterDoctors('gastroenterology',this)">🫃 Gastro</button>
+        <button class="filter-chip" onclick="filterDoctors('psychiatry',this)">🧘 Psychiatry</button>
+        <button class="filter-chip" onclick="filterDoctors('endocrinology',this)">🦋 Endocrinology</button>
+        <button class="filter-chip" onclick="filterDoctors('urology',this)">💧 Urology</button>
+        <button class="filter-chip" onclick="filterDoctors('nephrology',this)">🫘 Nephrology</button>
+        <button class="filter-chip" onclick="filterDoctors('rheumatology',this)">🦴 Rheumatology</button>
+        <button class="filter-chip" onclick="filterDoctors('immunology',this)">🌿 Immunology</button>
+        <button class="filter-chip" onclick="filterDoctors('gynecology',this)">🌸 Gynecology</button>
+        <button class="filter-chip" onclick="filterDoctors('dermatology',this)">🧴 Dermatology</button>
+        <button class="filter-chip" onclick="filterDoctors('oncology',this)">🎗️ Oncology</button>
+        <button class="filter-chip" onclick="filterDoctors('infectious_disease',this)">🦟 Infectious Disease</button>
+        <button class="filter-chip" onclick="filterDoctors('hematology',this)">🩸 Hematology</button>
+        <button class="filter-chip" onclick="filterDoctors('surgery',this)">🔪 Surgery</button>
+      </div>
+
+      <div class="booking-layout">
+        <!-- Doctor list -->
+        <div>
+          <h3 style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1rem;font-weight:600">
+            AVAILABLE DOCTORS
+          </h3>
+          <div id="doctors-list"></div>
+        </div>
+
+        <!-- Booking form -->
+        <div>
+          <div id="booking-form-section">
+            <div class="select-doctor-prompt">
+              <div style="font-size:3rem;margin-bottom:1rem">👈</div>
+              <h3>Select a Doctor</h3>
+              <p>Choose a doctor from the list to see available time slots and book your appointment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <!-- Appointment history modal (injected by JS) -->
+
+  <script src="/static/app.js"></script>
+</body>
+
+</html>
