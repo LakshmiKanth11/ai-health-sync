@@ -1,0 +1,76 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Is anyone there?",
+        "Greetings",
+        "Hello doc"
+      ],
+      "responses": [
+        "Hello! Welcome to AI Health Sync. How can I assist you with your health today?",
+        "Hi there! How are you feeling today?",
+        "Greetings! I am your AI Health Assistant. Please let me know how I can help you."
+      ]
+    },
+    {
+      "tag": "symptom_check",
+      "patterns": [
+        "I feel sick",
+        "I have a fever and headache",
+        "Check my symptoms",
+        "What disease do I have?",
+        "I have a cough and chills",
+        "I am feeling dizzy and nauseous",
+        "My stomach hurts",
+        "I have chest pain and shortness of breath",
+        "Diagnose my symptoms"
+      ],
+      "responses": [
+        "Please list all the symptoms you are experiencing so I can analyze them for you.",
+        "I can help analyze your symptoms. Please specify your symptoms separated by commas (e.g. fever, cough, headache).",
+        "Let me check your symptoms. What physical discomforts or signs are you noticing?"
+      ]
+    },
+    {
+      "tag": "book_appointment",
+      "patterns": [
+        "I want to book an appointment",
+        "Book a doctor",
+        "Find a doctor near me",
+        "Schedule a consultation",
+        "Can I see a specialist?",
+        "Appointment with cardiologist",
+        "Need a doctor recommendation",
+        "Doctor lookup"
+      ],
+      "responses": [
+        "Sure! I can help you find a doctor. What specialization or day are you looking for?",
+        "I can show you our list of available doctors and specialists. Would you like to check doctor availability?",
+        "Appointment scheduling is available! Please tell me which specialist or condition you need help with."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you later",
+        "Thank you",
+        "Thanks for your help",
+        "Exit",
+        "Have a good day"
+      ],
+      "responses": [
+        "Goodbye! Take care and stay healthy.",
+        "Thank you for using AI Health Sync. Feel free to return if you have more health queries!",
+        "Take care! Wishing you good health."
+      ]
+    }
+  ]
+}

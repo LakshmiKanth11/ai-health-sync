@@ -1,0 +1,9 @@
+flask
+pyngrok
+scikit-learn
+tensorflow
+nltk
+pandas
+numpy
+joblib
+sqlite3

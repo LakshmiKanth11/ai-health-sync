@@ -1,0 +1,27 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Trained Machine Learning & Deep Learning Models
+*.pkl
+*.h5
+*.keras
+
+# SQLite Databases & Logs
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Virtual environment & temporary folders
+env/
+venv/
+ENV/
+scratch/

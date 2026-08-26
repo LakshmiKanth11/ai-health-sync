@@ -1,0 +1,9 @@
+id,name,specialization,available_days,available_time,contact
+1,Dr. Sarah Jenkins,General Physician,"Monday, Wednesday, Friday",09:00 AM - 01:00 PM,+1-555-0192
+2,Dr. Rajesh Sharma,Cardiologist,"Tuesday, Thursday, Saturday",10:00 AM - 04:00 PM,+1-555-0183
+3,Dr. Elena Rostova,Dermatologist,"Monday, Tuesday, Thursday",11:00 AM - 03:00 PM,+1-555-0144
+4,Dr. Marcus Vance,Neurologist,"Wednesday, Friday, Saturday",02:00 PM - 06:00 PM,+1-555-0175
+5,Dr. Aisha Patel,Pediatrician,"Monday to Friday",09:00 AM - 02:00 PM,+1-555-0126
+6,Dr. David Kim,Orthopedic,"Tuesday, Thursday, Saturday",01:00 PM - 05:00 PM,+1-555-0137
+7,Dr. Sophia Martinez,ENT Specialist,"Monday, Wednesday, Saturday",10:00 AM - 02:00 PM,+1-555-0168
+8,Dr. Robert Chen,Gastroenterologist,"Tuesday, Wednesday, Friday",09:30 AM - 01:30 PM,+1-555-0159
