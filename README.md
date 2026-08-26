@@ -139,5 +139,3 @@ python SRC/test_suite.py
 
 ---
 
-## 📄 License
-Distributed under the MIT License. See `LICENSE` for details.
