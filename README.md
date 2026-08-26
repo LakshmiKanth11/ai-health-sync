@@ -4,7 +4,6 @@
 [![Framework](https://img.shields.io/badge/Framework-Flask-green.svg)](https://flask.palletsprojects.com/)
 [![ML](https://img.shields.io/badge/ML-Scikit--Learn-orange.svg)](https://scikit-learn.org)
 [![Deep Learning](https://img.shields.io/badge/Deep%20Learning-TensorFlow%20Keras-red.svg)](https://tensorflow.org)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 **AI Health Sync** is a full-stack artificial intelligence healthcare platform designed to perform intelligent symptom analysis, predict medical disease probabilities, and automate specialist doctor appointment scheduling.
 
